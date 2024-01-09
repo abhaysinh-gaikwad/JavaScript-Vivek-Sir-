@@ -1,0 +1,26 @@
+### Sign up / create an account / register a user
+POST http://127.0.0.1:9090/register
+Content-Type: application/json
+
+{
+  "username": "babu",
+  "firstname": "babu",
+  "lastname": "bhai",
+  "email": "babu@bhai.com",
+  "password": "babu123",
+  "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/762.jpg",
+  "userLevel": 2
+}
+
+### Login / sign-in
+POST http://127.0.0.1:9090/login
+Content-Type: application/json
+
+{
+  "username": "babu",
+  "password": "babu123" 
+}
+
+### Making authenticated requests / accessing protected routes
+GET http://127.0.0.1:9090/todos
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJhYnUiLCJwYXNzd29yZCI6IiQyYiQxMCRJc3NBLmJZaG5Qalh5cG9PNkF0VFVPbXdvRjQ2aWM4OFhUOE96MU50Y3pZVEl0WnF1WGg1ZSIsImVtYWlsIjoiYmFidUBiaGFpLmNvbSIsImZpcnN0bmFtZSI6ImJhYnUiLCJsYXN0bmFtZSI6ImJoYWkiLCJhdmF0YXIiOiJodHRwczovL2Nsb3VkZmxhcmUtaXBmcy5jb20vaXBmcy9RbWQzVzVEdWhnSGlyTEhHVml4aTZWNzZMaENrWlV6NnBuRnQ1QUpCaXl2SHllL2F2YXRhci83NjIuanBnIiwiY3JlYXRlZEF0IjoxNjc4OTUwMTk2ODQ5LCJpZCI6NTYsImlhdCI6MTY3ODk1MDI0NSwiZXhwIjoxNjc4OTYxMDQ1fQ.cXZsLFywHA5_J0HMwf7LZRl6Kazkts0qLdr7l9PibvE

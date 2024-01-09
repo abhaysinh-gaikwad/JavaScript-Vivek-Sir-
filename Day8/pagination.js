@@ -9,13 +9,13 @@ function getAsButton(text, dataId) {
       // let id = e.target.getAttribute('data-id');
       let id = btn.dataset.id;
       app.innerHTML = "Loding Data...";
-      fetchAndRenderPosts(15, id);
+      fetchAndRenderPosts(10, id);
       console.log(id);
     });
     return btn;
   }
   
-  let postsUrl = "https://jsonplaceholder.typicode.com/posts?_limit=15&_page=1";
+  let postsUrl = "https://jsonplaceholder.typicode.com/posts?_limit=10&_page=1";
   // let postsUrl = 'https://jsonplaceholder.typicode.com/posts';
   
   let app = document.getElementById("app");
@@ -47,7 +47,7 @@ function getAsButton(text, dataId) {
     return postListDiv;
   }
   
-  function fetchAndRenderPosts(limit = 15, pageNumber = 1) {
+  function fetchAndRenderPosts(limit = 10, pageNumber = 1) {
     let postsUrl = `https://jsonplaceholder.typicode.com/posts?_limit=${limit}&_page=${pageNumber}`;
   
     fetch(postsUrl)

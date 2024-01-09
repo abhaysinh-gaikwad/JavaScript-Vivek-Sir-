@@ -1,0 +1,34 @@
+GET https://jsonplaceholder.typicode.com/posts
+
+###
+POST https://jsonplaceholder.typicode.com/posts
+Content-Type: application/json
+
+{
+    "userId": 1, 
+    "title": "this is first title", 
+    "body": "this is post body"
+}
+
+###
+PUT https://jsonplaceholder.typicode.com/posts/5
+Content-Type: application/json
+
+{
+    "userId": 1,
+    "title" : "this is first title",
+    "body": "this is edited body"
+}
+
+###
+PATCH https://jsonplaceholder.typicode.com/posts/5
+Content-Type: application/json
+
+{
+    "title": "this is patched data"
+}
+
+###
+DELETE https://jsonplaceholder.typicode.com/posts/5
+Content-Type: application/json
+
